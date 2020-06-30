@@ -7,6 +7,7 @@ import ExampleImage from '../images/Synergies-Highlight.png';
 export default {
   component: Image,
   title: 'Image',
+  decorators: [story => <div style={{ padding: '3rem' }}>{story()}</div>],
   // Our exports that end in "Data" are not stories.
   excludeStories: /.*Data$/,
 };
