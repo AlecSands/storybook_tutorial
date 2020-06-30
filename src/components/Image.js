@@ -1,9 +1,11 @@
 import React from 'react';
-import './ImageCard.scss';
+// import './ImageCard.scss';
 
-function ImageCard() {
+function ImageCard({ image: { id, title, state, image }, onClickImage }) {
   return (
-    <div className="ImageCard"></div>
+    <div className={`ImageCard ${state}`} onClick={() => onClickImage(id)}>
+      <img src={image} className="Image" alt={title} />
+    </div>
   );
 }
 
